@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formularios</title>
+</head>
+
+<body>
+
+    <h2>Creando Formularios</h2>
+    <form class="formulario" action="">
+            <fieldset> <!-- <fieldset> agrupa contenido de nuestro formulario    -->
+             <legend>Tus datos</legend>   <!-- </legend> es el titutlo de la agrupadcion (fieldset) -->
+            <label for="name">Nombre</label>
+            <input type="text" name="nombre" id="nombre" placeholder="Tu nombre" autocomplete="off" required>
+            <!-- El atributo required se utilizan para obligar al usuario a llenar el campo  -->
+            <br><br>
+            <label for="apellido">Apellido</label>
+            <input type="text" name="apellido" id="apellido" placeholder="Tu apellido" autocomplete="off" required>
+            <br>
+            <label for="sexo">Sexo: </label>
+            <br>
+            <!--  -->
+            <input type="radio" name="sexo" id="sexo" value="hombre" checked>Hombre <br> <!-- checked seleciona por defecto -->
+            <input type="radio" name="sexo" id="sexo" value="mujer"  autofocus >Mujer   <br>  <!-- autofocus enfoca pero no lo seleciona -->
+            <input type="radio" name="sexo" id="sexo" value="otro">Otro     
+            <br>
+            <label for="fecha">Fecha de cumpleaños</label>
+            <input type="date" name="fecha"><br> <!-- Indicas solo la fecha -->
+            <label>Fecha y hora </label>
+            <input type="datetime-local" name="fecha"> <!-- Indicas la fecha y hora exacta  -->
+                <br><br>
+            <label for="email">Correo Electronico: </label>
+            <input type="email" name="email" id="email" placeholder="correo@dominio.com">
+
+            <br><br>
+            <label for="sitioweb">Tu sitio web: </label>
+            <input type="url" name="web" id="sitioweb" placeholder="https://www.dominio.com">
+
+            <br><br>
+
+            <label for="rango">Cuanto sabes de HTML? </label>
+            <input type="range" name="puntaje" id="rango" min="1" max="10">
+
+            <br><br>
+            <label for="">Personas que viene contingo</label>
+            <input type="number" name="cantidad" min="1" max="5">
+
+
+        </fieldset>
+
+        <br><br>
+
+        <fieldset>
+            <legend>Información sobre tus cursos </legend>
+            <label for="turno">Turno</label>
+            <select name="turno" id="turno" class="turno">
+                <option value="matutino">Matutino</option>
+                <option value="visturino" selected>Visturino</option>
+                <option value="nocturno">Nocturno</option>
+            </select>
+            <br><br>
+            <label>¿Que curso te gustaria q realizaramos?</label>
+            <input list="propuesta" name="encuesta"> <!-- el atributo input="list" va junto con la etiqueta <datalist> y su id de el mismo valor q se le puso al atributo list  -->
+            <datalist id="propuesta">
+            <option value="Javascript">
+            <option value="Angular">
+            <option value="React">
+            <option value="Vue JS">
+            <!-- Esto sirve para darte opciones o tu puedes llenarlo con otro q necesites -->
+
+            </datalist>
+            <br><br>
+            <label >Elige tus cursos: </label><br>
+            <input type="checkbox" value="php">PHP <br>
+            <input type="checkbox" value="mysql">MySQL <br>
+            <input type="checkbox" value="php">HTML5 <br>
+            <input type="checkbox" value="php">CSS3 <br>
+            <input type="checkbox" value="php">Javascript <br>
+            <br>
+
+            <label for="">Mes que tomaras el curso: </label> 
+            <input type="month" name="fechacurso"> <br>
+            <label for="hora" >Hora q tomaras el curso:</label>
+            <input type="time" id="hora"> <br>
+            <label for="semana">Semana q tomaras el curso:</label>
+            <input type="week" id="semana"> <br>
+            
+        </fieldset>
+        <br>
+
+        <fieldset>
+            <legend>Extra</legend>
+            <label for="">Las primeras 10 personas obtiene una camiseta, elgiten el color</label>
+            <input type="color" name="color">
+        </fieldset>
+
+        <br>
+
+        <fieldset>
+            <legend>Usuario y Password</legend>
+            <label for="usuario">Usuario</label>
+            <input type="text" name="usuario" id="usuario"> <br><br>
+            <label for="password">Password</label>
+            <input type="password" name="password"  id="password" required>
+
+        </fieldset>
+
+        <br>
+        <button type="reset">Borrar</button> <!-- el tipo reset restaura todos lo campos a vacios, si ponemos el atributo disable el el boton se desabilitara, normalmente los botones se utilizan con js --> 
+        <input type="submit" value="Enviar">
+    </form>
+
+</body>
+
+</html>
