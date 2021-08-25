@@ -1,0 +1,155 @@
+/* Selectores con id */
+#titulo-dos{
+    color: blue;
+}
+
+
+
+
+/* Selectores con clases */
+
+.parrafo{
+    color: black;
+}
+
+
+/* Si queremos usar 2 selectores estos deben ir segudios como los siguientes */
+
+h3#titulo-tres{
+    color: blueviolet;
+}
+
+.titulo-dos-class#titulo-dos{
+    color: brown;
+}
+
+/* Selector etiqueta y classe */
+
+section.seccion{
+    background-color:  rgb(125, 154, 207);
+}
+
+article.articulo{
+    background-color: rgb(193, 208, 236); */
+}
+
+.articulo p{
+    color: rgb(23, 27, 29);
+}
+
+/* Selector Universal */
+
+*{
+    /* color: rgb(104, 34, 170); */
+}
+
+.ventajas *{
+    font-size: 30px;
+}
+
+
+/* Selectores en grupo */
+
+h1, h2, h3 {
+    text-transform: uppercase;
+}
+
+h1, h2{
+    color: chartreuse;
+}
+
+/* Selectores Descendientes */
+
+/* nav.navegacion{
+    background-color: orange;
+} */
+
+nav.navegacion ul{
+    list-style: none;
+}
+
+nav.navegacion ul li {
+    margin: 10px;
+    padding: 5px;
+}
+
+nav.navegacion  li a {
+    color: blue;
+}
+
+
+/* Selectores con elementos adyacentes */
+/* Este selector modifica el estilo de la siguiente etiqueta en este caso en el div siguiente  */
+div.nosotros + div{
+    background-color: red;
+    color: white;
+}
+
+
+/* Selectores para enlances -> para enlaces externos */
+
+a[href*="facebook"]{
+    background-color: red!important;
+    color: white;
+}
+
+a[href*="google"]{
+    background-color: yellow!important;
+    color: white;
+}
+
+
+/* Selectores por Corchetes */
+img[id="logo"]{
+    margin-top: 50px;
+}
+
+[class="seccion"]{
+    background-color: salmon!important;
+}
+
+
+/* Selectores con Pseudoclases */
+
+/* focus: es para cuando pasamo el cursor para por el link y cambia el color q le asignemos, solo funcionara en la primera vez que entremos a al link */
+.navegacion li a:focus{
+    color: red;
+}
+
+/* visited: colorea los links q ya visitamos, el color lo definimos nosotros */
+.navegacion li a:visited{
+    color: rgb(120, 233, 223);
+}
+
+/* active: cuando hacemos click, se colorea con el color q configuramos, solo cuando hacemos click */
+.navegacion li a:active{
+    color: rgb(160, 64, 168);
+}
+ 
+nav.navegacion ul li a:hover{
+    color: greenyellow;
+    background-color: indigo;
+} 
+
+/* Selectores con Nth Chidel */
+/* OJo tiene q estar juntos los psudoselectores porque si no, no se apliacaran */
+
+div.menu nav ul li:nth-child(1){
+    background-color:greenyellow;
+}
+
+div.menu nav ul li:nth-child(2){
+    background-color:rgb(219, 145, 213);
+}
+
+div.menu nav ul li:nth-child(3){
+    background-color:rgb(47, 130, 255);
+}
+
+table tbody tr:nth-child(odd){
+    background-color: mediumspringgreen;
+}
+
+table tbody tr:nth-child(even){
+    background-color: rgb(171, 159, 212);
+}

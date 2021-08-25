@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/estilos.css">
     <title>Estructura de HTML</title>
 </head>
 
@@ -14,12 +15,12 @@
     <div class="contenedor">
         <header role="banner">
             <div class="logo">
-                <img src="img/logo.png" alt="Logo de empresa">
+                <img src="img/logo.png" id="logo" alt="Logo de empresa">
             </div>
             <nav class="navegacion" role="navigation">
                 <ul>
                     <li><a href="nosotros.html">Sobre nosotros</a></li>
-                    <li><a href="#">Nuestro Cursos</a></li>
+                    <li><a href="http://facebook.com">Nuestro Cursos</a></li>
                     <li><a href="http://google.com" target="_blank">Ir a Google</a></li>
                     <li><a href="#noticias">Noticias</a></li>
                 </ul>
@@ -27,14 +28,14 @@
         </header>
 
         <main class="contenido-principal">
-            <section>
-                <h2>Nuestros Cursos</h2>
+            <section class="seccion">
+                <h2 id="titulo-dos" class="titulo-dos-class">Nuestros Cursos</h2>
                 <div>
                     <h3>HTML5</h3>
                     <img src="img/html5.png" alt="Logo html5" height="200">
 
                     <p>Ventajas de este cursos</p>
-                    <ul>
+                    <ul class="ventajas">
                         <li>Lo puedes tomar en línea</li>
                         <li>Avansar a tu ritmo</li>
                         <li>Puedes preguntar tus dudas al instructor</li>
@@ -66,10 +67,10 @@
                 </div>
             </section>
 
-            <section id="noticias">
+            <section class="seccion" id="noticias">
                 <h2>Ultimas Noticias</h2>
-                <article>
-                    <h3>Aprender a programar el siglo XXI es muy importante</h3>
+                <article class="articulo">
+                    <h3 id="titulo-tres">Aprender a programar el siglo XXI es muy importante</h3>
                     <p>Duis a sapien congue, varius ex in, aliquam libero. Nulla pharetra leo ut urna pulvinar, nec
                         lacinia lacus hendrerit. Proin euismod sapien ac dolor tincidunt laoreet. Phasellus elementum
                         ultricies consequat. Aliquam erat volutpat. Morbi venenatis condimentum urna, et volutpat turpis
@@ -79,9 +80,9 @@
                         amet. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos
                         himenaeos.</p>
                 </article>
-                <article>
+                <article class="articulo">
                     <h3>Aprender a programar el siglo XXI es muy importante</h3>
-                    <p>LDuis a sapien congue, varius ex in, aliquam libero. Nulla pharetra leo ut urna pulvinar, nec
+                    <p class="parrafo">LDuis a sapien congue, varius ex in, aliquam libero. Nulla pharetra leo ut urna pulvinar, nec
                         lacinia lacus hendrerit. Proin euismod sapien ac dolor tincidunt laoreet. Phasellus elementum
                         ultricies consequat. Aliquam erat volutpat. Morbi venenatis condimentum urna, et volutpat turpis
                         mattis id. Curabitur in sem at orci tincidunt convallis vel a arcu. Pellentesque libero nunc,
@@ -147,17 +148,29 @@
 
     <footer>
         <div class="nosotros">
-            <h3>Sobre nuestra escuela</h3>
+            <h3 class="about">Sobre nuestra escuela</h3>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero maiores qui amet cupiditate quae
                 voluptate optio, culpa impedit quasi consequuntur, officia facilis totam a maxime. Accusamus dolores at
                 delectus quod!</p>
         </div>
-        <div class="menu">
-            <nav class="navegacion">
-                menu aqui
-            </nav>
+        <div>
+            <p>Prueba de Selectores Adyacentes  </p>
         </div>
-        <p>Cursos de Desarrollo Web &mdash; Todos los derechos reservados &copy;</p>
+        <div class="menu">
+            <nav class="navigator">
+                <ul>
+                    <li><a href="#">Facebook</a></li>
+                    <li><a href="#">Reddit</a></li>
+                    <li><a href="#">Instagram</a></li>
+                    <li><a href="#">Twiter</a></li>
+                </ul>
+            </nav>
+            
+            
+        </div>
+        <center>
+            <p>Cursos de Desarrollo Web &mdash; Todos los derechos reservados &copy;</p>
+        </center>
     </footer>
 </body>
 
